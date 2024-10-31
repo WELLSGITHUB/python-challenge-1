@@ -146,8 +146,8 @@ while place_order:
                     quantity_df = input(f"How many {item_name} would you like to order? ")
 
                     # Check if the quantity is a number, default to 1 if not
-                    if quantity_df.isdigit():
-                        quantity = int(quantity_df)
+                    if quantity_input.isdigit():
+                        quantity = int(quantity_input)
                     else:
                         quantity = 1  # Default to 1 if input is invalid
                         print("Invalid quantity input. Defaulting to 1.")
@@ -161,12 +161,12 @@ while place_order:
 
                     print(f"Added {quantity} x {item_name} to your order.")
                     # Tell the customer that their input isn't valid
-                else:
+                    else:
                     print("That item is not on the menu.")
 
                 # Tell the customer they didn't select a menu option
-        else:
-                    print("You didn't select a valid item number.")
+                else:
+    print("You didn't select a valid item number.")
         
                     # Tell the customer they didn't select a menu option
     print(f"{menu_category} was not a menu option.")
@@ -182,15 +182,15 @@ while True:
         # 5. Check the customer's input
         match keep_ordering:
             case 'y':
-                print("Great! Let's continue.")
+            print("Great! Let's continue.")
         
-                break  # Exit the loop to continue ordering
-            case'n':
-                print("Thank you for your order!")
-                place_order = False  # Set place_order to False to end the main ordering loop
-                break  # Exit the loop
-            case _:
-                print("Invalid input. Please type 'Y' for Yes or 'N' for No.")
+        break  # Exit the loop to continue ordering
+        case 'n':
+        print("Thank you for your order!")
+        place_order = False  # Set place_order to False to end the main ordering loop
+        break  # Exit the loop
+        case _:
+        print("Invalid input. Please type 'Y' for Yes or 'N' for No.")
                 # Keep ordering
         if order_list:
                     print("\nHere is your order summary:")
@@ -259,6 +259,6 @@ for order in order_list:
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 total_cost = sum(order["Price"] * order["Quantity"] for order in order_list)
-print(f"\nTotal cost: ${total_cost:.2f}")
-
-print("No items were ordered.")
+    print(f"\nTotal cost: ${total_cost:.2f}")
+else:
+    print("No items were ordered.")
