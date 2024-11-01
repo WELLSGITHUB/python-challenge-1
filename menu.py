@@ -220,7 +220,6 @@ else:
                 # their order
                     print("Thank you for visiting the variety food truck! Have a great day!")
                 # Exit the keep ordering question loopbreak
-
                             
      # Tell the customer to try again
 print("Invalid item selection. Please try again.")
@@ -261,4 +260,3 @@ for order in order_list:
 total_cost = sum(order["Price"] * order["Quantity"] for order in order_list)
 print(f"\nTotal cost: ${total_cost:.2f}")
 
-print("No items were ordered.")
